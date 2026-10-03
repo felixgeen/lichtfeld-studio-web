@@ -1,0 +1,26 @@
+{
+  "id": "community:splat_sor",
+  "namespace": "community",
+  "name": "splat_sor",
+  "displayName": "Floater Cleanup (SOR)",
+  "summary": "Remove floaters from a trained splat with local-density or global statistical outlier removal, with hold-to-compare A/B.",
+  "description": "Post-training floater cleanup. Local density detection compares each Gaussian with its own neighbourhood, so it catches floaters hugging thin detail like cables, spokes and grass that classic SOR misses; global SOR uses one scene-wide threshold for floaters in open space. Limit the analysis to the current selection, optionally prune low-opacity Gaussians, then hold a button to A/B the result in the viewport before baking. Non-destructive: outliers are soft-deleted and restorable until you bake them.",
+  "author": "felixgeen",
+  "latestVersion": "0.4.0",
+  "lichtfeldVersion": ">=0.5.0",
+  "pluginApi": ">=1,<2",
+  "requiredFeatures": [],
+  "downloads": 0,
+  "keywords": ["floaters", "cleanup", "outlier removal", "SOR", "editing"],
+  "repository": "https://github.com/felixgeen/lichtfeld-floater-cleanup",
+  "versions": [
+    {
+      "version": "0.4.0",
+      "pluginApi": ">=1,<2",
+      "lichtfeldVersion": ">=0.5.0",
+      "requiredFeatures": [],
+      "dependencies": ["numpy", "scipy"],
+      "gitRef": "main"
+    }
+  ]
+}
